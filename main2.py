@@ -25,7 +25,7 @@ def main():
 
     # 2. 모델 로드
     # pt 파일 불러옴
-    model_path = os.path.join(os.path.dirname(__file__), 'best2.pt')
+    model_path = os.path.join(os.path.dirname(__file__), 'best3.pt')
     try:
         model = YOLO(model_path)
     except Exception as e:
