@@ -20,7 +20,7 @@ def main():
 
     # 이미지 경로 검증
     if not os.path.exists(args.input):
-        # 파일이 없으면 그냥 종료 (혹은 에러 메시지)
+        # 파일이 없으면 그냥 종료
         sys.exit(1)
 
     # 2. 모델 로드
