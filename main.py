@@ -9,7 +9,7 @@ from ultralytics import YOLO
 
 def parse_args():
     p = argparse.ArgumentParser("CV assignment runner")
-
+    # 1. 인자파싱
     # Sample argument usage
     p.add_argument("--input", required=True, type=str, help="path to input image")
     p.add_argument('--task', type=str, required=True, choices=['presence', 'bbox'], help='Task type')
