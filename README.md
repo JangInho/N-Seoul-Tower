@@ -1,4 +1,14 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/df7rPF0a)
+# YOLOv8 기반 남산타워 객체 탐지 및 오탐지(False Positive) 제거
+### 유사 랜드마크(도쿄타워 등)와의 오탐지 문제를 해결한 N서울타워 실시간 탐지 모델 구현
+
+- Tech Stack: Python, YOLOv8 (Ultralytics), PyTorch, OpenCV
+- 주요 성과 및 문제 해결: Hard Negative Mining 적용: 초기 모델이 형태가 유사한 '밀라드 타워', '도쿄 타워'를 오탐지하는 문제를 발견. 전체 데이터의 40%(약 462장)를 유사 타워 이미지로 구성하고, Empty Label(라벨 없음) 처리를 통해 모델이 이를 배경(Negative)으로 학습하도록 유도하여 오탐지 문제를 해결함
+
+- Data-Centric 접근: 모델 구조 변경 없이 데이터의 질적 개선(유사 객체 데이터 추가)만으로 정확도와 신뢰도를 확보하는 데이터 중심 AI 개발 수행.
+
+- 최적화 및 성능: 실시간 탐지를 위해 경량화 모델인 YOLOv8 Nano를 선정하여 학습. 50 Epoch 학습 결과 mAP 0.995 및 Loss 수렴을 달성하며 성능 검증 완료
+
+
 # N Seoul Tower
 
 OpenCV 기반으로 이미지 내에 N서울타워(N Seoul Tower)가 있는지의 여부와 위치를 예측하는 코드를 작성하세요.
